@@ -6,7 +6,8 @@ const cors = require('cors')
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 server.use(middlewares);
 server.use(morgan("dev"));
@@ -18,6 +19,10 @@ server.use((req, res, next) => {
 server.use(cors())
 server.use(router);
 
-server.listen(PORT, () => {
+// server.listen(PORT, () => {
+//   console.log(`JSON Server is running at port ${PORT}`);
+// });
+
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`JSON Server is running at port ${PORT}`);
 });

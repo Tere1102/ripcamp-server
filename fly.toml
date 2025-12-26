@@ -3,8 +3,8 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'ripcamp-server'
-primary_region = 'mad'
+app = 'ingeina-server'
+primary_region = 'ams'
 
 [build]
 
